@@ -26,17 +26,30 @@ namespace Abstract_Concept
             //    Console.WriteLine(ex.Message);
             //}
 
-            Name n1 = new Name();
-            try
-            {
-                //string name = n1.AcceptName("arati");
-                String name = n1.AcceptName("");
-                Console.WriteLine("the name is="+name);
-            }
-            catch(NameException ex )
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //Name n1 = new Name();
+            //try
+            //{
+            //    //string name = n1.AcceptName("arati");
+            //    String name = n1.AcceptName("");
+            //    Console.WriteLine("the name is="+name);
+            //}
+            //catch(NameException ex )
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            Calculation cal1 = new Calculation();
+            Mydelegate del1 = new Mydelegate(cal1.Addition);
+            int result = del1.Invoke(20, 50);
+            Console.WriteLine(result);
+
+            Test t = new Test();
+            Mydegate1 m = new Mydegate1(t.AcceptName);
+            Console.WriteLine(m.Invoke("rahul"));
+
+            Test1 t1 = new Test1();
+            Mydegate1 m1 = new Mydegate1(t1.Acceptname1);
+            Console.WriteLine(m1.Invoke("WELCOME"));
         }
     }
 }
