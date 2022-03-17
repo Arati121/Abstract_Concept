@@ -8,7 +8,7 @@ namespace Abstract_Concept
     {
         abstract public void CalculateArea();
     }
-    public class Circle : Shape
+    public class Circle : Shape,IPrintable
     {
         private int radius;
         double result, PI = 3.14;
@@ -18,6 +18,10 @@ namespace Abstract_Concept
             this.radius = radius;
         }
 
+        public string test()
+        {
+            return "calculate area";
+        }
         public override void CalculateArea()
         {
             result = PI * radius * radius;

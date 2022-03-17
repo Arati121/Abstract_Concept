@@ -7,6 +7,7 @@ namespace Abstract_Concept
         static void Main(string[] args)
         {
             Circle c1 = new Circle(4);
+            Console.WriteLine(c1.test());
             c1.CalculateArea();
             Console.WriteLine(c1);
 
